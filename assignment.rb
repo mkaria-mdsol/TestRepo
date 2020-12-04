@@ -63,7 +63,7 @@ class StudyConduct
         puts "Welcome to #{ @study_name } !"
         @participant=Participant.new
         @questionsArr=[]
-        @questionsArr[0]=Questions::QuestionClass.create.ask("Have you read all terms and conditions ? ")
+        @questionsArr.push(Questions::QuestionClass.create.ask("Have you read all terms and conditions ? "))
         @questionsArr.push(Questions::QuestionClass.create.ask("Are you ok if we store your information for study purpose? "))
         @questionsArr.push(Questions::QuestionClass.create.ask("Are you aware of the purpose of the study Conduct ? "))
         @questionsArr.push(Questions::QuestionClass.create.ask("Are your ready for the Clinical Trial? "))
